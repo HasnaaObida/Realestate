@@ -1,0 +1,114 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Luxury Villa with Pool",
+      "location": "Marrakech, Morocco",
+      "price": "2,500,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160407/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_ymrgrb.jpg",
+      "description": "Beautiful luxury villa with private pool and garden located in the heart of Marrakech.",
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "area": 420
+    },
+    {
+      "id": 2,
+      "title": "Modern Apartment Downtown",
+      "location": "Casablanca, Morocco",
+      "price": "850,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160397/allphoto-bangkok-nI4aC1kaTRc-unsplash_uv3k3z.jpg",
+      "description": "Modern apartment close to business center, restaurants and shops.",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": 110
+    },
+    {
+      "id": 3,
+      "title": "Beachfront Villa",
+      "location": "Agadir, Morocco",
+      "price": "3,200,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160400/dinuka-lankaloka-HKr5cn6S0q0-unsplash_qaai9v.jpg",
+      "description": "Stunning beachfront villa with sea view and direct beach access.",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "area": 500
+    },
+    {
+      "id": 4,
+      "title": "Cozy Studio",
+      "location": "Rabat, Morocco",
+      "price": "420,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160415/brian-babb-XbwHrt87mQ0-unsplash_t7gfln.jpg",
+      "description": "Small cozy studio perfect for students or young professionals.",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area": 45
+    },
+    {
+      "id": 5,
+      "title": "Penthouse with City View",
+      "location": "Tangier, Morocco",
+      "price": "1,750,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160406/don-kaveen-4LLHJHyXQVk-unsplash_gpfnvh.jpg",
+      "description": "Luxury penthouse with panoramic city and sea views.",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area": 210
+    },
+    {
+      "id": 6,
+      "title": "Family House with Garden",
+      "location": "Fes, Morocco",
+      "price": "980,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160396/isaac-quesada-s34TlUTPIf4-unsplash_vkqxsj.jpg",
+      "description": "Perfect family house in a calm neighborhood with large garden.",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "area": 180
+    },
+    {
+      "id": 7,
+      "title": "Luxury Apartment Marina",
+      "location": "Saidia, Morocco",
+      "price": "1,200,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160401/luke-van-zyl-koH7IVuwRLw-unsplash_jmdssm.jpg",
+      "description": "High-end apartment in marina area with sea view.",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": 125
+    },
+    {
+      "id": 8,
+      "title": "Traditional Riad",
+      "location": "Meknes, Morocco",
+      "price": "1,600,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160400/dinuka-lankaloka-HKr5cn6S0q0-unsplash_qaai9v.jpg",
+      "description": "Authentic Moroccan riad with traditional architecture.",
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "area": 300
+    },
+    {
+      "id": 9,
+      "title": "Mountain View Chalet",
+      "location": "Ifrane, Morocco",
+      "price": "1,100,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160408/vu-anh-TiVPTYCG_3E-unsplash_b4yq6o.jpg",
+      "description": "Warm chalet with mountain views, perfect for winter holidays.",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "area": 160
+    },
+    {
+      "id": 10,
+      "title": "High Standing Office",
+      "location": "Casablanca Finance City",
+      "price": "2,900,000",
+      "image": "https://res.cloudinary.com/dyluyp1lj/image/upload/v1769160398/florian-schmidinger-b_79nOqf95I-unsplash_2_aer993.jpg",
+      "description": "Premium office space in the heart of Casablanca Finance City.",
+      "bedrooms": 0,
+      "bathrooms": 2,
+      "area": 260
+    }
+  ]
+}
