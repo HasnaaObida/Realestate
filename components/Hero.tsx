@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 flex flex-col justify-center h-full text-center text-white">
         {/* Badge */}
         <span className="bg-yellow-500 text-black font-semibold px-4 py-1 rounded-full text-sm mb-4 inline-block">
-          Premium Properties Across France
+          Premium Properties Across Morocco
         </span>
 
         {/* Title */}
