@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PropertyCard from "@/components/PropertyCard";
 import axios from "axios";
+import PropertyCard from "@/components/PropertyCard";
 
 type Property = {
   id: number;
@@ -31,7 +31,7 @@ export default function PropertiesPage() {
         setProperties(res.data);
         setFiltered(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch(console.log);
   }, []);
 
   useEffect(() => {
@@ -59,44 +59,38 @@ export default function PropertiesPage() {
   }, [search, city, type, maxPrice, properties]);
 
   return (
-    <main className="bg-gray-50 min-h-screen">
-      {/* Hero */}
-      <section className="relative h-72 bg-[url('/hero-properties.jpg')] bg-cover bg-center mb-12">
+    <main className="bg-gray-50 min-h-screen p-6">
+
+      {/* Hero Section */}
+      <section className="relative h-80 md:h-96 bg-[url('/hero-properties.jpg')] bg-cover bg-center mb-12 rounded-xl shadow-lg overflow-hidden">
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-6xl mx-auto h-full flex flex-col justify-center text-center text-white px-6">
           <h1 className="text-4xl md:text-5xl font-bold">
             Find Your Next <span className="text-yellow-400">Dream Home</span>
           </h1>
           <p className="text-lg md:text-xl mt-2 text-gray-200">
-            Explore all premium properties for sale and rent
+            Explore premium properties for sale and rent
           </p>
-
-          <div className="flex mt-6 justify-center max-w-xl mx-auto">
-            <input
-              type="text"
-              placeholder="Search by title or location..."
-              className="flex-1 p-3 rounded-l-full outline-none text-black shadow-sm"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button className="bg-yellow-500 px-6 rounded-r-full text-white font-semibold hover:bg-yellow-600 transition">
-              Search
-            </button>
-          </div>
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="max-w-6xl mx-auto px-6 mb-10 flex flex-col md:flex-row gap-4">
+      <section className="max-w-6xl mx-auto px-6 mb-10 flex flex-col md:flex-row gap-4 items-center">
+        <input
+          type="text"
+          placeholder="Search by title or location..."
+          className="flex-1 p-3 rounded-full outline-none border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500 shadow-sm text-gray-900 placeholder-gray-400"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
         <input
           type="text"
           placeholder="City"
-          className="p-3 border rounded-full focus:ring-yellow-500 focus:border-yellow-500 flex-1"
+          className="p-3 border rounded-full flex-1 focus:ring-yellow-500 focus:border-yellow-500 shadow-sm text-gray-900 placeholder-gray-400"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
         <select
-          className="p-3 border rounded-full focus:ring-yellow-500 focus:border-yellow-500"
+          className="p-3 border rounded-full focus:ring-yellow-500 focus:border-yellow-500 shadow-sm text-gray-900"
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
@@ -107,7 +101,7 @@ export default function PropertiesPage() {
         <input
           type="number"
           placeholder="Max Price"
-          className="p-3 border rounded-full focus:ring-yellow-500 focus:border-yellow-500"
+          className="p-3 border rounded-full flex-1 focus:ring-yellow-500 focus:border-yellow-500 shadow-sm text-gray-900 placeholder-gray-400"
           value={maxPrice}
           onChange={(e) =>
             setMaxPrice(e.target.value ? Number(e.target.value) : "")
@@ -115,12 +109,13 @@ export default function PropertiesPage() {
         />
       </section>
 
+
       {/* Properties Grid */}
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
         {filtered.length ? (
           filtered.map((p) => <PropertyCard key={p.id} property={p} />)
         ) : (
-          <p className="text-center text-gray-500 col-span-full">
+          <p className="text-center text-gray-500 col-span-full mt-12">
             No properties found.
           </p>
         )}

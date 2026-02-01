@@ -1,69 +1,79 @@
 "use client";
 
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
+  const propertyTitle = searchParams.get("property") || "";
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (propertyTitle) {
+      setMessage(`Hi, I'm interested in "${propertyTitle}".`);
+    }
+  }, [propertyTitle]);
+
   return (
-    <main className="min-h-screen bg-gray-50 py-16">
+    <main className="min-h-screen bg-gray-50 py-16 px-4">
       {/* Title */}
-      <section className="max-w-3xl mx-auto text-center px-6 mb-16">
+      <section className="max-w-3xl mx-auto text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Get in Touch
         </h1>
-        <p className="text-lg text-gray-600">
-          Have questions? Need help finding the perfect property? Send us a message and we’ll respond as soon as possible.
+        <p className="text-lg text-gray-700">
+          Have questions or interested in a property? Fill out the form below and we’ll get back to you quickly.
         </p>
       </section>
 
       {/* Form + Contact Info */}
-      <section className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
+      <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <form className="space-y-6 bg-white p-8 rounded-2xl shadow-lg">
+        <form className="bg-white p-8 rounded-3xl shadow-xl space-y-6">
           <label className="block">
-            <span className="text-gray-700 font-medium">Full Name</span>
+            <span className="text-gray-800 font-semibold">Full Name</span>
             <input
               type="text"
               placeholder="Your Name"
-              className="mt-1 block w-full p-4 border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500"
+              className="mt-2 w-full p-4 border border-gray-200 rounded-2xl focus:ring-yellow-500 focus:border-yellow-500 shadow-sm"
             />
           </label>
 
           <label className="block">
-            <span className="text-gray-700 font-medium">Email Address</span>
+            <span className="text-gray-800 font-semibold">Email Address</span>
             <input
               type="email"
               placeholder="your@email.com"
-              className="mt-1 block w-full p-4 border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500"
+              className="mt-2 w-full p-4 border border-gray-200 rounded-2xl focus:ring-yellow-500 focus:border-yellow-500 shadow-sm"
             />
           </label>
 
           <label className="block">
-            <span className="text-gray-700 font-medium">Message</span>
+            <span className="text-gray-800 font-semibold">Message</span>
             <textarea
               rows={6}
-              placeholder="How can we help you?"
-              className="mt-1 block w-full p-4 border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500"
+              className="mt-2 w-full p-4 border border-gray-200 rounded-2xl focus:ring-yellow-500 focus:border-yellow-500 shadow-sm"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </label>
 
           <button
             type="submit"
-            className="w-full bg-yellow-500 text-white font-semibold py-4 rounded-full hover:bg-yellow-600 transition"
+            className="w-full bg-yellow-500 text-white py-4 rounded-full font-semibold hover:bg-yellow-600 transition"
           >
             Send Message
           </button>
         </form>
 
-        {/* Contact Details */}
-        <div className="space-y-8 text-gray-700">
+        {/* Contact Info */}
+        <div className="space-y-8">
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
               Contact Information
             </h3>
-            <p className="text-gray-600">
-              Got questions? We’re here to help!
-            </p>
+            <p className="text-gray-600">We’re here to help! Reach out via phone, email, or visit our office.</p>
           </div>
 
           <div className="flex items-start gap-4">
@@ -90,8 +100,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="w-full h-48 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 italic">
+          <div className="w-full h-64 bg-gray-100 rounded-3xl flex items-center justify-center text-gray-400 italic">
             Map Placeholder
           </div>
         </div>
