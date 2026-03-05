@@ -41,7 +41,7 @@ export default function ContactPage() {
           </label>
 
           <label className="block">
-            <span className="text-gray-800 font-semibold">Email Address</span>
+            <span className="text-gray-800 font-semibold">Email Addresse</span>
             <input
               type="email"
               placeholder="your@email.com"
